@@ -1,0 +1,9 @@
+/** Modified Responsive CSS **/
+
+@media (min-width: 1024px) {
+    .container-fluid {
+        width: 1024px;
+    }
+}
+
+

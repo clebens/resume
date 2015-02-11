@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "0.0.0",
+  "description": "A Web Application Version of my Resume",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.11.2",
+    "mongodb": "^1.4.30",
+    "mongoose": "^3.8.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clebens/resume.git"
+  },
+  "author": "Colin Lebens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clebens/resume/issues"
+  },
+  "homepage": "https://github.com/clebens/resume"
+}
