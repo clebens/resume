@@ -77,4 +77,9 @@ app.get('/users/:user/education', function(req, res, next) {
     });
 });
 
-app.listen(3000, function() {});
+var port = 1337;
+
+if (process.env.HEROKU_DEPLOY == 'true')
+    port = 80;
+
+app.listen(port, function() {});
