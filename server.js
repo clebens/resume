@@ -4,10 +4,15 @@ var fs = require('fs');
 var path = require('path');
 var mongo = require('mongodb').MongoClient;
 var assert = require('assert');
+//var process = require('process');
 
-var dblogin = fs.readFileSync("prv/dbpw", { "encoding" : "utf-8" } ).split(',');
-var dbu = dblogin[0].trim();
-var dbp = dblogin[1].trim();
+var dbu = process.env.MLAB_USERNAME;
+var dbp = process.env.MLAB_PW;
+if( !dbu || !dbp) {
+    var dblogin = fs.readFileSync("prv/dbpw", { "encoding" : "utf-8" } ).split(',');
+    var dbu = dblogin[0].trim();
+    var dbp = dblogin[1].trim();
+}
 
 var dbdomain = 'ds041841.mongolab.com';
 var dbport = '41841';
